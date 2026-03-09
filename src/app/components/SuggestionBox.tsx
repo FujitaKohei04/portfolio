@@ -8,9 +8,9 @@ export const SuggestionBox = () => {
   return (
     <button onClick={() => setCount(count+1)}>
       <div className={styles.suggestBoxNomal}></div>
-      <div className={styles.suggestBoxNomal}>{count}</div>
       <div className={styles.suggestBox60}></div>
       <div className={styles.suggestBoxMinus60}></div>
+      <div className={styles.suggestBoxNomal}>{count}</div>
     </button>
   );
 }
