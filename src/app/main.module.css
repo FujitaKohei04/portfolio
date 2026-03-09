@@ -1,27 +1,23 @@
-.suggestBoxNomal, .suggestBox60, .suggestBoxMinus60{
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin: 16;
-    width: 18px;
-    height: 32px;
-    aspect-ratio: 1 / 1;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
 
-.suggestBox60{
-    transform:rotate(60deg);
-}
-.suggestBoxMinus60{
-    transform:rotate(-60deg);
-}
 
 .thumbnailTitle {
     font-family: "メイリオ";
 }
 
+.workImages {
+    display: flex;
+    flex-direction: column;
+    gap: 4;
+}
+
+.imageFlame {
+    padding: 2;
+    background-color: color-mix(in srgb, var(--foreground), transparent 70%);
+}
+
+.workChanger {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 8;
+}
