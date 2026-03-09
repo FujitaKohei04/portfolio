@@ -1,11 +1,15 @@
+"use client";
+
 import Image from "next/image";
+import styles from "@/app/main.module.css";
+import { useState } from "react";
 
 const Thumbnail = () => {
   return (
-    <div>
-      <div className="flex flex-row justify-center items-end m-20 gap-2">
-        <div className="text-6xl font-bold">うえるかむ</div>
-        <div className="">in 藤's house</div>
+    <div className={styles.thumbnailTitle}>
+      <div className="flex flex-col justify-center">
+        <div className="text-6xl font-bold">Welcom</div>
+        <div className="">to 藤's house</div>
       </div>
     </div>
   );
@@ -77,17 +81,23 @@ const Contact = () => {
 }
 
 const SuggestionBox = () => {
+  const [count, setCount] = useState(0);
   return (
-    <div>
-      <button className="border rounded-full p-5 m-5 absolute bottom-0 right-0">Sug</button>
-    </div>
+    <button onClick={() => setCount(count+1)}>
+      <div className={styles.suggestBoxNomal}></div>
+      <div className={styles.suggestBoxNomal}>{count}</div>
+      <div className={styles.suggestBox60}></div>
+      <div className={styles.suggestBoxMinus60}></div>
+    </button>
   );
 }
 
 
 export default function Home() {
+  
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center m-2">
+      <SuggestionBox />
       <main className="flex flex-col gap-10">
         <Thumbnail />
         <AboutMe />
@@ -97,7 +107,7 @@ export default function Home() {
         <Contact />
        
       </main>
-      <SuggestionBox />
+      
     </div>
   );
 }
