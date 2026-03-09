@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--background);
     
 }
 
@@ -20,26 +21,4 @@
 }
 .suggestBoxMinus60{
     transform:rotate(-60deg);
-}
-
-.thumbnailTitle {
-    font-family: "メイリオ";
-}
-
-.workImages {
-    display: flex;
-    flex-direction: column;
-    gap: 4;
-}
-
-.imageFlame {
-    padding: 2;
-    background-color: color-mix(in srgb, var(--foreground), transparent 70%);
-}
-
-.workChanger {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    gap: 8;
 }

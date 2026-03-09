@@ -4,6 +4,11 @@ import Image from "next/image";
 import styles from "@/app/main.module.css";
 import { useState } from "react";
 
+import GMK1 from "@/app/images/gomoku1.png";
+import GMK2 from "@/app/images/gomoku2.png";
+import GMK3 from "@/app/images/gomoku3.png";
+
+
 const Thumbnail = () => {
   return (
     <div className={styles.thumbnailTitle}>
@@ -30,7 +35,25 @@ const Works = () => {
     <div>
       <div className="text-5xl">Works</div>
       <div>
-        {/* <iamge /> */}
+        <Work />
+      </div>
+    </div>
+  );
+}
+
+const Work = () => {
+  const [imgNum, setImgNum] = useState(0);
+  return (
+    <div className={styles.workImages}>
+      
+      <div className={styles.imageFlame}>
+        {imgNum === 0 && <Image src={GMK1} alt="制作物：五目並べの簡単な例"/>}
+        {imgNum === 1 && <Image src={GMK2} alt="制作物：五目並べの勝利例"/>}
+        {imgNum === 2 && <Image src={GMK3} alt="制作物：五目並べのライトモード例"/>}
+      </div>
+      <div className={styles.workChanger}>
+        <button onClick={() => setImgNum((imgNum+2)%3)}>＜</button>
+        <button onClick={() => setImgNum((imgNum+1)%3)}>＞</button>
       </div>
     </div>
   );
@@ -75,7 +98,7 @@ const Contact = () => {
   return (
     <div>
       <div className="text-5xl">Contact</div>
-      <div>fujita.kohei04@gmail.com</div>
+      <a href="mailto:fujita.kohei04@gmail.com">fujita.kohei04@gmail.com</a>
     </div>
   );
 }
@@ -99,13 +122,24 @@ export default function Home() {
     <div className="flex flex-col items-center m-2">
       <SuggestionBox />
       <main className="flex flex-col gap-10">
-        <Thumbnail />
-        <AboutMe />
-        <Works />
-        <Skills />
-        <Profill />
-        <Contact />
-       
+        <section id="thumbnail">
+          <Thumbnail />
+        </section>
+        <section id="aboutMe">
+          <AboutMe />
+        </section>
+        <section id="works">
+          <Works />
+        </section>
+        <section id="skills">
+          <Skills />
+        </section>
+        <section id="profill">
+          <Profill />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
       </main>
       
     </div>
