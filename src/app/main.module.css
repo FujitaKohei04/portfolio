@@ -1,7 +1,10 @@
 
 
 .thumbnailTitle {
-    font-family: "メイリオ";
+    font-family: "Noto Serif JP";
+    font-weight: 900;
+    margin-top: 60;
+    margin-bottom: 60;
 }
 
 .workImages {
@@ -20,4 +23,17 @@
     flex-direction: row;
     justify-content: end;
     gap: 8;
+}
+
+.target {
+    scroll-margin-top: 10vh;
+}
+
+.soumenSource {
+    border-bottom: 1px solid;
+}
+
+.supplement {
+    font-size: xx-small;
+    opacity: 50%;
 }

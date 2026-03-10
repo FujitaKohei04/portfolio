@@ -12,9 +12,13 @@ import GMK3 from "@/app/images/gomoku3.png";
 const Thumbnail = () => {
   return (
     <div className={styles.thumbnailTitle}>
-      <div className="flex flex-col justify-center">
-        <div className="text-6xl font-bold">Welcom</div>
-        <div className="">to 藤's house</div>
+      <div className="flex flex-col justify-center gap-4">
+        <div className="text-6xl">うぇるかむ</div>
+        <div>
+          <div>Fujita Kohei</div>
+          <div>福井大学所属</div>
+        </div>
+        
       </div>
     </div>
   );
@@ -24,8 +28,16 @@ const AboutMe = () => {
   return (
     <div>
       <div className="text-5xl">About Me</div>
-      <div>福井県出身。福井大学 工学部 電気電子情報工学科に所属。</div>
+      <div>福井県出身で、福井大学 工学部 電気電子情報工学科に所属。
+      アニメや漫画を見たり、お絵描きをするのが趣味。最近は料理にハマっている。
       
+        そばやそうめんが好きで、３食同じでも飽きない。めんつゆは、
+        <a href="https://www.yamamori.co.jp/products/sonomama_somen_500/" target="_blank" className={styles.soumenSource}>
+          これ
+        </a>
+        一択。
+      </div>
+      <div className={styles.supplement}>このヤマモリのそうめんつゆに、青ネギを多めに入れて、刻みのりをパラっとかけて、最高のめんつゆの完成。もし飽きたら、卵を投下してみたり、ごま油をいれてみたり、わさびをちょっと混ぜてみたり、いろいろな楽しみ方がある。沼。</div>
     </div>
   );
 }
@@ -110,23 +122,23 @@ export default function Home() {
   
   return (
     <div className="flex flex-col items-center m-2">
-      <main className="flex flex-col gap-10">
-        <section id="thumbnail">
+      <main className="flex flex-col gap-50">
+        <section id="thumbnail" className={styles.target}>
           <Thumbnail />
         </section>
-        <section id="aboutMe">
+        <section id="aboutMe" className={styles.target}>
           <AboutMe />
         </section>
-        <section id="works">
+        <section id="works" className={styles.target}>
           <Works />
         </section>
-        <section id="skills">
+        <section id="skills" className={styles.target}>
           <Skills />
         </section>
-        <section id="profill">
+        <section id="profill" className={styles.target}>
           <Profill />
         </section>
-        <section id="contact">
+        <section id="contact" className={styles.target}>
           <Contact />
         </section>
       </main>
