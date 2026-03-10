@@ -8,6 +8,10 @@ import GMK1 from "@/app/images/works/gomoku/gomoku1.png";
 import GMK2 from "@/app/images/works/gomoku/gomoku2.png";
 import GMK3 from "@/app/images/works/gomoku/gomoku3.png";
 
+import PT1 from "@/app/images/works/PT/PTdef.png";
+import PT2 from "@/app/images/works/PT/PTworking.png";
+import PT3 from "@/app/images/works/PT/PTrestiong.png";
+
 
 type WorkContent = {
   workName: string;
@@ -38,19 +42,19 @@ const WORKS: WorkContent[] = [
     ],
   },
   {
-    workName: "五目並べ",
+    workName: "ポモドーロタイマー",
     workDescription: "ローカル用五目並べ。〇側と✕側のマークに分かれ、盤面上に「縦」「横」「斜め」のいずれかに対し、先にマークを５つ並べたほうが勝ち。Next.jsを用いて実装。",
     examples: [
       {
-        img: GMK1,
+        img: PT1,
         description: "簡単な例",
       },
       {
-        img: GMK2,
+        img: PT2,
         description: "簡単な例",
       },
       {
-        img: GMK3,
+        img: PT3,
         description: "簡単な例",
       },
     ],
@@ -140,31 +144,34 @@ const Work = ({workContents}:{workContents: WorkContent[]}) => {
       <div>
         <div className={styles.worksArranger}>
         {works.map((work, index) => (
-          <button key={index} onClick={() => workOnClicked(index)} className={styles.workImageFlame}>
-            <Image src={work.examples[0].img} alt={work.examples[0].description} />
+          <button key={index} onClick={() => workOnClicked(index)} className={styles.worksArrangerUnder}>
+            <Image src={work.examples[0].img} alt={work.examples[0].description} className={styles.workImage} />
           </button>
         ))}
         </div>
       </div>
 
       {isShowWorkDetail &&
-        <div className={styles.workImages} onClick={() => setIsShowWorkDetail(false)}>
-          <div className={styles.workCloseButton} >
-            <button onClick={() => setIsShowWorkDetail(false)}>✕</button>
+        <div className={styles.workMordal} onClick={() => setIsShowWorkDetail(false)}>
+          <div className={styles.workMordalContent}>
+            <div className={styles.workCloseButton} >
+              <button onClick={() => setIsShowWorkDetail(false)}>✕</button>
+            </div>
+            <div className={styles.workDetailCard} onClick={(e) => e.stopPropagation()}>
+              <div className={styles.workDescription}>
+                {`${works[workNum].workDescription}`}
+              </div>
+              
+              <div className={styles.workImageFlame} >
+                <Image src={works[workNum].examples[imgNum].img} alt={works[workNum].examples[imgNum].description} className={styles.workImage} fill style={{ objectFit: 'contain' }}/>
+              </div>
+              <div className={styles.workChanger} >
+                <button onClick={() => setImgNum((imgNum+(IMG_NUM-1))%IMG_NUM)}>＜</button>
+                <button onClick={() => setImgNum((imgNum+1)%IMG_NUM)}>＞</button>
+              </div>
+            </div>
           </div>
-          <div className={styles.workDetailCard} onClick={(e) => e.stopPropagation()}>
-            <div className={styles.workDescription}>
-              {`${works[workNum].workDescription}`}
-            </div>
-            
-            <div className={styles.workImageFlame} >
-              <Image src={works[workNum].examples[imgNum].img} alt={works[workNum].examples[imgNum].description}/>
-            </div>
-            <div className={styles.workChanger} >
-              <button onClick={() => setImgNum((imgNum+(IMG_NUM-1))%IMG_NUM)}>＜</button>
-              <button onClick={() => setImgNum((imgNum+1)%IMG_NUM)}>＞</button>
-            </div>
-          </div>
+          
         </div>
       }
     </div>
@@ -222,21 +229,21 @@ const Contact = () => {
 export default function Home() {
   
   return (
-    <div className="flex flex-col items-center m-2">
+    <div className="flex flex-col items-center">
       <main className="flex flex-col gap-50">
-        <section id="thumbnail" className={styles.target}>
+        <section id="thumbnail" className={`${styles.target} ${styles.topic}`}>
           <Thumbnail />
         </section>
-        <section id="aboutMe" className={styles.target}>
+        <section id="aboutMe" className={`${styles.target} ${styles.topic}`}>
           <AboutMe />
         </section>
-        <section id="works" className={styles.target}>
+        <section id="works" className={`${styles.target} ${styles.topic}`}>
           <Works />
         </section>
-        <section id="skills" className={styles.target}>
+        <section id="skills" className={`${styles.target} ${styles.topic}`}>
           <Skills />
         </section>
-        <section id="profill" className={styles.target}>
+        <section id="profill" className={`${styles.target} ${styles.topic}`}>
           <Profill />
         </section>
         <section id="contact" className={styles.target}>

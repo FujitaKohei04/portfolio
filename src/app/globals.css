@@ -24,4 +24,11 @@ body {
   color: var(--foreground);
   font-family: system-ui;
   font-weight: 10;
+  overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
