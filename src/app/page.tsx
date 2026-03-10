@@ -1,12 +1,77 @@
 "use client";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import styles from "@/app/main.module.css";
 import { useState } from "react";
 
-import GMK1 from "@/app/images/gomoku1.png";
-import GMK2 from "@/app/images/gomoku2.png";
-import GMK3 from "@/app/images/gomoku3.png";
+import GMK1 from "@/app/images/works/gomoku/gomoku1.png";
+import GMK2 from "@/app/images/works/gomoku/gomoku2.png";
+import GMK3 from "@/app/images/works/gomoku/gomoku3.png";
+
+
+type WorkContent = {
+  workName: string;
+  examples: {
+    img: StaticImageData;
+    description: string;
+  }[];
+}
+
+const WORKS: WorkContent[] = [
+  {
+    workName: "五目並べ",
+    examples: [
+      {
+        img: GMK1,
+        description: "簡単な例",
+      },
+      {
+        img: GMK2,
+        description: "簡単な例",
+      },
+      {
+        img: GMK3,
+        description: "簡単な例",
+      },
+    ],
+  },
+  {
+    workName: "五目並べ",
+    examples: [
+      {
+        img: GMK1,
+        description: "簡単な例",
+      },
+      {
+        img: GMK2,
+        description: "簡単な例",
+      },
+      {
+        img: GMK3,
+        description: "簡単な例",
+      },
+    ],
+  },
+  {
+    workName: "五目並べ",
+    examples: [
+      {
+        img: GMK1,
+        description: "簡単な例",
+      },
+      {
+        img: GMK2,
+        description: "簡単な例",
+      },
+      {
+        img: GMK3,
+        description: "簡単な例",
+      },
+    ],
+  },
+];
+
+const IMG_NUM = 3;
 
 
 const Thumbnail = () => {
@@ -47,27 +112,54 @@ const Works = () => {
     <div>
       <div className="text-5xl">Works</div>
       <div>
-        <Work />
+        <Work workContents={WORKS}/>
       </div>
     </div>
   );
 }
 
-const Work = () => {
+const Work = ({workContents}:{workContents: WorkContent[]}) => {
+  const [workNum, setWorkNum] = useState(0);
+  const [works, setWorks] = useState<WorkContent[]>(workContents);
   const [imgNum, setImgNum] = useState(0);
+
+  const [isShowWorkDetail, setIsShowWorkDetail] = useState(false);
+
+  const workOnClicked = (index: number) => {
+    setWorkNum(index);
+    setIsShowWorkDetail(true);
+    setImgNum(0);
+  }
+
   return (
-    <div className={styles.workImages}>
-      
-      <div className={styles.imageFlame}>
-        {imgNum === 0 && <Image src={GMK1} alt="制作物：五目並べの簡単な例"/>}
-        {imgNum === 1 && <Image src={GMK2} alt="制作物：五目並べの勝利例"/>}
-        {imgNum === 2 && <Image src={GMK3} alt="制作物：五目並べのライトモード例"/>}
+    <div>
+      <div>
+        <div className={styles.worksArranger}>
+        {works.map((work, index) => (
+          <button key={index} onClick={() => workOnClicked(index)} className={styles.imageFlame}>
+            <Image src={work.examples[0].img} alt={work.examples[0].description} />
+          </button>
+        ))}
+        </div>
       </div>
-      <div className={styles.workChanger}>
-        <button onClick={() => setImgNum((imgNum+2)%3)}>＜</button>
-        <button onClick={() => setImgNum((imgNum+1)%3)}>＞</button>
-      </div>
+
+      {isShowWorkDetail &&
+        <div className={styles.workImages} onClick={() => setIsShowWorkDetail(false)}>
+          <div className={styles.workCloseButton} onClick={(e) => e.stopPropagation()}>
+            <button onClick={() => setIsShowWorkDetail(false)}>✕</button>
+          </div>
+          
+          <div className={styles.imageFlame} onClick={(e) => e.stopPropagation()}>
+            <Image src={works[workNum].examples[imgNum].img} alt={works[workNum].examples[imgNum].description}/>
+          </div>
+          <div className={styles.workChanger} onClick={(e) => e.stopPropagation()}>
+            <button onClick={() => setImgNum((imgNum+(IMG_NUM-1))%IMG_NUM)}>＜</button>
+            <button onClick={() => setImgNum((imgNum+1)%IMG_NUM)}>＞</button>
+          </div>
+        </div>
+      }
     </div>
+    
   );
 }
 
