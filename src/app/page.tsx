@@ -11,6 +11,7 @@ import GMK3 from "@/app/images/works/gomoku/gomoku3.png";
 
 type WorkContent = {
   workName: string;
+  workDescription: string;
   examples: {
     img: StaticImageData;
     description: string;
@@ -20,6 +21,7 @@ type WorkContent = {
 const WORKS: WorkContent[] = [
   {
     workName: "五目並べ",
+    workDescription: "ローカル用五目並べ。〇側と✕側のマークに分かれ、盤面上に「縦」「横」「斜め」のいずれかに対し、先にマークを５つ並べたほうが勝ち。Next.jsを用いて実装。",
     examples: [
       {
         img: GMK1,
@@ -37,6 +39,7 @@ const WORKS: WorkContent[] = [
   },
   {
     workName: "五目並べ",
+    workDescription: "ローカル用五目並べ。〇側と✕側のマークに分かれ、盤面上に「縦」「横」「斜め」のいずれかに対し、先にマークを５つ並べたほうが勝ち。Next.jsを用いて実装。",
     examples: [
       {
         img: GMK1,
@@ -54,6 +57,7 @@ const WORKS: WorkContent[] = [
   },
   {
     workName: "五目並べ",
+    workDescription: "ローカル用五目並べ。〇側と✕側のマークに分かれ、盤面上に「縦」「横」「斜め」のいずれかに対し、先にマークを５つ並べたほうが勝ち。Next.jsを用いて実装。",
     examples: [
       {
         img: GMK1,
@@ -136,7 +140,7 @@ const Work = ({workContents}:{workContents: WorkContent[]}) => {
       <div>
         <div className={styles.worksArranger}>
         {works.map((work, index) => (
-          <button key={index} onClick={() => workOnClicked(index)} className={styles.imageFlame}>
+          <button key={index} onClick={() => workOnClicked(index)} className={styles.workImageFlame}>
             <Image src={work.examples[0].img} alt={work.examples[0].description} />
           </button>
         ))}
@@ -145,16 +149,21 @@ const Work = ({workContents}:{workContents: WorkContent[]}) => {
 
       {isShowWorkDetail &&
         <div className={styles.workImages} onClick={() => setIsShowWorkDetail(false)}>
-          <div className={styles.workCloseButton} onClick={(e) => e.stopPropagation()}>
+          <div className={styles.workCloseButton} >
             <button onClick={() => setIsShowWorkDetail(false)}>✕</button>
           </div>
-          
-          <div className={styles.imageFlame} onClick={(e) => e.stopPropagation()}>
-            <Image src={works[workNum].examples[imgNum].img} alt={works[workNum].examples[imgNum].description}/>
-          </div>
-          <div className={styles.workChanger} onClick={(e) => e.stopPropagation()}>
-            <button onClick={() => setImgNum((imgNum+(IMG_NUM-1))%IMG_NUM)}>＜</button>
-            <button onClick={() => setImgNum((imgNum+1)%IMG_NUM)}>＞</button>
+          <div className={styles.workDetailCard} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.workDescription}>
+              {`${works[workNum].workDescription}`}
+            </div>
+            
+            <div className={styles.workImageFlame} >
+              <Image src={works[workNum].examples[imgNum].img} alt={works[workNum].examples[imgNum].description}/>
+            </div>
+            <div className={styles.workChanger} >
+              <button onClick={() => setImgNum((imgNum+(IMG_NUM-1))%IMG_NUM)}>＜</button>
+              <button onClick={() => setImgNum((imgNum+1)%IMG_NUM)}>＞</button>
+            </div>
           </div>
         </div>
       }
