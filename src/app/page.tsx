@@ -135,12 +135,12 @@ const IMG_NUM = 3;
 
 const Thumbnail = () => {
   return (
-    <div className={styles.thumbnailTitle}>
+    <div >
       <div className="flex flex-col justify-center gap-4">
-        <div className="text-6xl">うぇるかむ</div>
+        <div className={styles.thumbnailTitle}>うぇるかむ</div>
         <div>
-          <div>Fujita Kohei</div>
-          <div>福井大学所属</div>
+          <div>Fujita Kohei - Fukui University Student</div>
+          <div></div>
         </div>
         
       </div>

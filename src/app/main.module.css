@@ -2,9 +2,18 @@
 
 .thumbnailTitle {
     font-family: "Noto Serif JP";
+    font-size: 16vw;
     font-weight: 900;
     margin-top: 60;
-    margin-bottom: 60;
+}
+
+@media (hover: hover) {
+    .thumbnailTitle {
+        font-family: "Noto Serif JP";
+        font-size: 8vw;
+        font-weight: 900;
+        margin-top: 60;
+    }
 }
 
 .worksArranger {
