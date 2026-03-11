@@ -129,6 +129,27 @@
     opacity: 50%;
 }
 
+.skillsChartLanguage {
+    display: flex;
+    flex-direction: row;
+    margin: 8px;
+    gap: 8px;
+    align-items: end;
+}
+
+.skillsChartBarContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skillsChartBar {
+    width: 16px;
+    background-color: var(--foreground);
+    display: flex;
+    flex-direction: column;
+}
+
 .target {
     scroll-margin-top: 10vh;
 }

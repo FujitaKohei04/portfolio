@@ -83,6 +83,53 @@ const WORKS: WorkContent[] = [
   },
 ];
 
+type ChartContent = {
+  label: string;
+  value: number;
+}
+
+const progLang : ChartContent[] = [
+  {
+    label: "C言語",
+    value: 12,
+  },
+  {
+    label: "Python",
+    value: 7,
+  },
+  {
+    label: "Java",
+    value: 6,
+  },
+  {
+    label: "HTML/CSS",
+    value: 1,
+  },
+  {
+    label: "JavaScript",
+    value: 2
+  }
+]
+
+const frontend: ChartContent[] = [
+  {
+    label: "React",
+    value: 3,
+  },
+  {
+    label: "Next.js",
+    value: 2,
+  },
+  {
+    label: "Vite",
+    value: 1,
+  },
+  {
+    label: "TailwindCSS",
+    value: 2,
+  },
+]
+
 const IMG_NUM = 3;
 
 
@@ -192,24 +239,46 @@ const Skills = () => {
   return (
     <div>
       <div className="text-5xl">Skills</div>
-      <div className="flex flex-row gap-3">
+      <div className="flex flex-col gap-10">
         <div>
-          <div className="text-3xl">履修言語</div>
+          <div className="text-3xl">Programming Language</div>
           <div>
-            <div>C言語</div>
-            <div>Python</div>
-            <div>Java</div>
-            <div>HTML/CSS</div>
-            <div>JavaScript</div>
+            <SkillsChart contents={progLang}/>
           </div>
         </div>
         <div>
-          <div className="text-3xl">履修ライブラリ</div>
+          <div className="text-3xl">Frontend</div>
           <div>
-            <div>React</div>
+            <SkillsChart contents={frontend} />
+          </div>
+        </div>
+        <div>
+          <div className="text-3xl">Backend</div>
+          <div>
+            <div>DBの基本操作</div>
+          </div>
+        </div>
+        <div>
+          <div className="text-3xl">Infrastructure</div>
+          <div>
+            <div>Linuxの基礎</div>
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+const SkillsChart = ( {contents: langs}:{contents: ChartContent[]}) => {
+  return (
+    <div className={styles.skillsChartLanguage}>
+      {langs.map((lang, index) => (
+        <div key={index} className={styles.skillsChartBarContainer}>
+          <div className={styles.skillsChartBar} style={{height: lang.value*16}}/>
+          <div>{lang.label}</div>
+          <div>{lang.value}カ月</div>
+        </div>
+      ))}
     </div>
   );
 }
