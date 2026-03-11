@@ -239,30 +239,22 @@ const Skills = () => {
   return (
     <div>
       <div className="text-5xl">Skills</div>
-      <div className="flex flex-col gap-10">
+      <div className={styles.skillsKind}>
         <div>
           <div className="text-3xl">Programming Language</div>
-          <div>
-            <SkillsChart contents={progLang}/>
-          </div>
+          <SkillsChart contents={progLang}/>
         </div>
         <div>
           <div className="text-3xl">Frontend</div>
-          <div>
             <SkillsChart contents={frontend} />
-          </div>
         </div>
         <div>
           <div className="text-3xl">Backend</div>
-          <div>
             <div>DBの基本操作</div>
-          </div>
         </div>
         <div>
           <div className="text-3xl">Infrastructure</div>
-          <div>
             <div>Linuxの基礎</div>
-          </div>
         </div>
       </div>
     </div>
@@ -287,7 +279,15 @@ const Profill = () => {
   return (
     <div>
       <div className="text-5xl">Profill</div>
-      <div>爆誕</div>
+      <div className={styles.profillYearTitle}>
+        <div className={styles.profillYear}>- 2004</div>
+        <div>爆誕</div>
+      </div>
+      <div className={styles.profillYearTitle}>
+        <div className={styles.profillYear}>- 2023</div>
+        <div>福井大学入学</div>
+      </div>
+      
     </div>
   );
 }

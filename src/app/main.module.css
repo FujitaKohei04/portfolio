@@ -138,6 +138,13 @@
     opacity: 50%;
 }
 
+.skillsKind {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-left: 16px;
+}
+
 .skillsChartLanguage {
     display: flex;
     flex-direction: row;
@@ -157,6 +164,17 @@
     background-color: var(--foreground);
     display: flex;
     flex-direction: column;
+}
+
+.profillYearTitle {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    font-size: x-large;
+}
+
+.profillYear {
+    font-weight: bold;
 }
 
 .target {
