@@ -21,6 +21,16 @@
     background-color: color-mix(in srgb, var(--foreground), transparent 70%);
 }
 
+@media (hover: hover) {
+    .worksArrangerUnder {
+        width: 20vw;
+        margin-right: 1vw;
+        margin-bottom: 1vw;
+        padding: 2px;
+        background-color: color-mix(in srgb, var(--foreground), transparent 70%);
+    }
+}
+
 .workDetailCard {
     margin: 4px;
     padding: 4px;
@@ -36,6 +46,10 @@
     width: 80vw;
     margin-right: 8px;
     
+}
+
+.workName {
+    font-weight: bold;
 }
 
 .workDescription {
@@ -120,9 +134,15 @@
 }
 
 .topic {
-    height: 100vh;
+    height: auto;
     width: 100vw;
 }
 
+@media (hover: hover) {
+    .topic {
+        height: auto;
+        width: 60vw;
+    }
+}
 
 
