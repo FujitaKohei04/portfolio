@@ -177,6 +177,48 @@
     font-weight: bold;
 }
 
+.backgroundUpL {
+    position: fixed;
+    top: 10vh;
+    left: 10vw;
+    opacity: 30%;
+}
+
+.backgroundUpR {
+    position: fixed;
+    top: 10vh;
+    right: 10vw;
+    opacity: 30%;
+}
+
+.backgroundUnL {
+    position: fixed;
+    bottom: 10vh;
+    left: 10vw;
+    opacity: 30%;
+}
+
+.backgroundUnR {
+    position: fixed;
+    bottom: 10vh;
+    right: 10vw;
+    opacity: 30%;
+}
+
+.background {
+    position: relative;
+}
+
+.backgroundName {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 200;
+    transform-origin: left top;
+    transform: rotate(90deg);
+    /* translate: translateX(-150%); */
+}
+
 .main {
     display: flex;
     flex-direction: column;

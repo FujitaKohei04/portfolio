@@ -305,6 +305,19 @@ const Contact = () => {
   );
 }
 
+const Background = () => {
+  return (
+    <div className={styles.background}>
+      <div className={styles.backgroundName}>FUJITAKOHEI</div>
+      <div className={styles.backgroundUpL}>00</div>
+      <div className={styles.backgroundUpR}>01</div>
+      <div className={styles.backgroundUnL}>10</div>
+      <div className={styles.backgroundUnR}>11</div>
+    </div>
+    
+  )
+}
+
 
 
 
@@ -313,6 +326,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       <main className={styles.main}>
+        <Background />
         <section id="thumbnail" className={`${styles.target} ${styles.topic}`}>
           <Thumbnail />
         </section>
