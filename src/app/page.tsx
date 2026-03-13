@@ -4,6 +4,8 @@ import Image, { StaticImageData } from "next/image";
 import styles from "@/app/main.module.css";
 import { useState } from "react";
 
+import WELCOME from "@/app/images/Thumnail/welcome.svg";
+
 import GMK1 from "@/app/images/works/gomoku/gomoku1.png";
 import GMK2 from "@/app/images/works/gomoku/gomoku2.png";
 import GMK3 from "@/app/images/works/gomoku/gomoku3.png";
@@ -15,6 +17,7 @@ import PT3 from "@/app/images/works/PT/PTrestiong.png";
 import JIA1 from "@/app/images/works/JIA/J1F_1.png";
 import JIA2 from "@/app/images/works/JIA/J1F_2.png";
 import JIA3 from "@/app/images/works/JIA/J1F_Win.png";
+import { DrawLogoSVG } from "./components/Welcome";
 
 
 type WorkContent = {
@@ -137,7 +140,8 @@ const Thumbnail = () => {
   return (
     <div >
       <div className="flex flex-col justify-center gap-4">
-        <div className={styles.thumbnailTitle}>うぇるかむ</div>
+        {/* <div className={styles.thumbnailTitle}>うぇるかむ</div> */}
+        <DrawLogoSVG />
         <div>
           <div>Fujita Kohei - Fukui University Student</div>
           <div></div>
