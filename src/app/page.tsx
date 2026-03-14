@@ -285,11 +285,11 @@ const Profill = () => {
       <div className="text-5xl">Profill</div>
       <div className={styles.profillYearTitle}>
         <div className={styles.profillYear}>- 2004</div>
-        <div>爆誕</div>
+        <div className={styles.profillTitle}>爆誕</div>
       </div>
       <div className={styles.profillYearTitle}>
         <div className={styles.profillYear}>- 2023</div>
-        <div>福井大学入学</div>
+        <div className={styles.profillTitle}>福井大学入学</div>
       </div>
       
     </div>
@@ -308,7 +308,7 @@ const Contact = () => {
 const Background = () => {
   return (
     <div className={styles.background}>
-      <div className={styles.backgroundName}>FUJITAKOHEI</div>
+      {/* <div className={styles.backgroundName}>HAIKEI DAYO</div> */}
       <div className={styles.backgroundUpL}>00</div>
       <div className={styles.backgroundUpR}>01</div>
       <div className={styles.backgroundUnL}>10</div>
@@ -325,8 +325,8 @@ export default function Home() {
   
   return (
     <div className="flex flex-col items-center">
+      <Background />
       <main className={styles.main}>
-        <Background />
         <section id="thumbnail" className={`${styles.target} ${styles.topic}`}>
           <Thumbnail />
         </section>

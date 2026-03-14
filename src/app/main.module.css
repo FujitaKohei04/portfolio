@@ -161,7 +161,7 @@
 
 .skillsChartBar {
     width: 16px;
-    background-color: var(--foreground);
+    background-color: var(--color-primary);
     display: flex;
     flex-direction: column;
 }
@@ -174,34 +174,40 @@
 }
 
 .profillYear {
+    /* font-weight: bold; */
+}
+
+.profillTitle {
     font-weight: bold;
+    color: var(--color-primary);
+
 }
 
 .backgroundUpL {
     position: fixed;
-    top: 10vh;
-    left: 10vw;
+    top: 50px;
+    left: 8px;
     opacity: 30%;
 }
 
 .backgroundUpR {
     position: fixed;
-    top: 10vh;
-    right: 10vw;
+    top: 50px;
+    right: 8px;
     opacity: 30%;
 }
 
 .backgroundUnL {
     position: fixed;
-    bottom: 10vh;
-    left: 10vw;
+    bottom: 8px;
+    left: 8px;
     opacity: 30%;
 }
 
 .backgroundUnR {
     position: fixed;
-    bottom: 10vh;
-    right: 10vw;
+    bottom: 8px;
+    right: 8px;
     opacity: 30%;
 }
 
@@ -210,20 +216,26 @@
 }
 
 .backgroundName {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    font-size: 200;
-    transform-origin: left top;
-    transform: rotate(90deg);
-    /* translate: translateX(-150%); */
+    font-size: 40vh;
+    font-weight: bold;
+    line-height: 0.72;
+    opacity: 3%;
+    transform-origin: center right;
+    transform: 
+        rotate(90deg) 
+        translate(100vh, 40vh) ;
+
 }
 
 .main {
     display: flex;
     flex-direction: column;
     gap: 200px;
-    margin-top: 40px;
+    margin-top: 60px;
+    /* padding: 40px; */
 }
 
 .target {
