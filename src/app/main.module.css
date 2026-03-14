@@ -230,6 +230,23 @@
 
 }
 
+.iconAndTitle {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+
+.icon {
+    width: 36px;
+    height: 36px;
+    color: var(--color-true-black);
+    stroke-width: 2.5;
+    padding: 4px;
+    transform: translateY(2px);
+    background-color: var(--color-primary);
+}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -245,6 +262,11 @@
 .topic {
     height: auto;
     width: 100vw;
+}
+
+.topicTitle {
+    font-size: 48px;
+    font-weight: bold;
 }
 
 @media (hover: hover) {
