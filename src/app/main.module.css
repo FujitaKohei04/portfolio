@@ -16,6 +16,18 @@
     }
 }
 
+.aboutMeDscription {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 16px;
+}
+
+.aboutMeName {
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
 .worksArranger {
     display: flex;
     flex-direction: row;
@@ -131,6 +143,8 @@
 
 .soumenSource {
     border-bottom: 1px solid;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
 }
 
 .supplement {
