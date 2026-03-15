@@ -19,7 +19,7 @@ const Thumbnail = () => {
         {/* <div className={styles.thumbnailTitle}>うぇるかむ</div> */}
         <DrawLogoSVG />
         <div>
-          <div>Fujita Kohei - Fukui University Student</div>
+          <div className={Styles.thumbnailNameAnimation}>Fujita Kohei - Fukui University Student</div>
           <div></div>
         </div>
         
@@ -223,19 +223,19 @@ export default function Home() {
         <section id="thumbnail" className={`${Styles.target} ${Styles.topic}`}>
           <Thumbnail />
         </section>
-        <section id="aboutMe" className={`${Styles.target} ${Styles.topic}`}>
+        <section id="aboutMe" className={`${Styles.target} ${Styles.topic} ${Styles.topicAnimation}`}>
           <AboutMe />
         </section>
-        <section id="works" className={`${Styles.target} ${Styles.topic}`}>
+        <section id="works" className={`${Styles.target} ${Styles.topic} ${Styles.topicAnimation}`}>
           <Works />
         </section>
-        <section id="skills" className={`${Styles.target} ${Styles.topic}`}>
+        <section id="skills" className={`${Styles.target} ${Styles.topic} ${Styles.topicAnimation}`}>
           <Skills />
         </section>
-        <section id="profill" className={`${Styles.target} ${Styles.topic}`}>
+        <section id="profill" className={`${Styles.target} ${Styles.topic} ${Styles.topicAnimation}`}>
           <Profill />
         </section>
-        <section id="contact" className={Styles.target}>
+        <section id="contact" className={`${Styles.target} ${Styles.topic} ${Styles.topicAnimation}`}>
           <Contact />
         </section>
       </main>

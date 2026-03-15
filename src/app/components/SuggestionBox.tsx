@@ -7,7 +7,7 @@ import { Send } from "lucide-react";
 export const SuggestionBox = () => {
   const [count, setCount] = useState(0);
   return (
-    <button onClick={(() => window.open("", "_blank"))}>
+    <button className={styles.suggestBox} onClick={(() => window.open("", "_blank"))}>
       <div className={styles.suggestBoxNomal}></div>
       <div className={styles.suggestBox60}></div>
       <div className={styles.suggestBoxMinus60}></div>

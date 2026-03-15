@@ -1,3 +1,7 @@
+.suggestBox {
+    z-index: 3;
+}
+
 .suggestBoxNomal, .suggestBox60, .suggestBoxMinus60{
     position: fixed;
     bottom: 0;
