@@ -1,0 +1,47 @@
+.backgroundUpL {
+    position: fixed;
+    top: 50px;
+    left: 8px;
+    opacity: 30%;
+}
+
+.backgroundUpR {
+    position: fixed;
+    top: 50px;
+    right: 8px;
+    opacity: 30%;
+}
+
+.backgroundUnL {
+    position: fixed;
+    bottom: 8px;
+    left: 8px;
+    opacity: 30%;
+}
+
+.backgroundUnR {
+    position: fixed;
+    bottom: 8px;
+    right: 8px;
+    opacity: 30%;
+}
+
+.background {
+    position: relative;
+    z-index: 1;
+}
+
+.backgroundName {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 40vh;
+    font-weight: bold;
+    line-height: 0.72;
+    opacity: 3%;
+    transform-origin: center right;
+    transform: 
+        rotate(90deg) 
+        translate(100vh, 40vh) ;
+
+}

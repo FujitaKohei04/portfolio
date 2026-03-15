@@ -1,0 +1,49 @@
+.skillsKind {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-left: 16px;
+}
+
+.skillsChartLanguage {
+    display: flex;
+    flex-direction: row;
+    margin: 8px;
+    gap: 8px;
+    align-items: end;
+}
+
+.skillsChartBarContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skillsChartBar {
+    width: 16px;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+}
+
+.iconAndTitle {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+
+.icon {
+    width: 36px;
+    height: 36px;
+    color: var(--color-true-black);
+    stroke-width: 2.5;
+    padding: 4px;
+    transform: translateY(2px);
+    background-color: var(--color-primary);
+}
+
+.topicTitle {
+    font-size: 48px;
+    font-weight: bold;
+}

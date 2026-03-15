@@ -1,4 +1,4 @@
-import styles from "@/app/components/Welcome.module.css";
+import styles from "@/app/components/Welcome/Welcome.module.css";
 
 export function DrawLogoSVG() {
     return (
