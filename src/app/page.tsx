@@ -18,24 +18,15 @@ import { Skills } from "./components/Skills/Skills";
 import { Profile } from "./components/Profile/Profile";
 import { Contact } from "./components/Contact/Contact";
 import { Background } from "./components/Background/Background";
-
-
-
-
-
-
-
-
-
-
-
-
+import { SuggestionBox } from "./components/SuggestionBox/SuggestionBox";
+import { Header } from "./components/Header/Header";
 
 export default function Home() {
-  
   return (
     <div className="flex flex-col items-center">
       <Background />
+      <Header />
+      <SuggestionBox />
       <main className={Styles.main}>
         <section id="thumbnail" className={`${Styles.target} ${Styles.topic}`}>
           <Thumbnail />

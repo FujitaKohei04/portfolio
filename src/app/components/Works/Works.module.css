@@ -48,18 +48,23 @@
     margin-bottom: 8px;
 }
 
-.workMordal {
+.workMordalBackground {
     position: fixed;
     top: 0;
     left: 0;
+    background-color: color-mix(in srgb, var(--background), transparent 30%);
+    z-index: 4;
     width: 100vw;
     height: 100vh;
-    background-color: color-mix(in srgb, var(--background), transparent 30%);
+}
+
+.workMordal {
     display: flex;
     flex-direction: column;
     gap: 4;
     justify-items: center;
     align-items: center;
+    /* background-color: var(--background); */
 }
 
 .workMordalContent {
@@ -69,7 +74,7 @@
     width: 80vw;
     justify-content: center;
     align-items: center;
-
+    background-color: var(--background);
 }
 
 @media (hover: hover) {

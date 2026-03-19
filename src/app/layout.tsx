@@ -31,8 +31,8 @@ export default function RootLayout({
       >
         <Header />
         <SuggestionBox />
-
         {children}
+        
       </body>
     </html>
   );
