@@ -8,15 +8,13 @@ import { IMG_NUM, WORKS } from "@/app/data/work";
 import { useState } from "react";
 import { WorkContent } from "@/app/types/work";
 import { createPortal } from "react-dom";
+import { TopicTitle } from "../TopicTitle/TopicTitle";
 
 
 export const Works = () => {
   return (
     <div>
-      <div className={Styles.iconAndTitle}>
-        <Hammer className={Styles.icon} />
-        <div className={Styles.topicTitle}>Works</div>
-      </div>
+      <TopicTitle title="Works" icon={Hammer} />
       <div>
         <Work workContents={WORKS}/>
       </div>

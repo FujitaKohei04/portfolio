@@ -1,0 +1,21 @@
+.iconAndTitle {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-m);
+    align-items: center;
+}
+
+.icon {
+    width: 36px;
+    height: 36px;
+    color: var(--color-true-black);
+    stroke-width: 2.5;
+    padding: 4px;
+    transform: translateY(2px);
+    background-color: var(--color-primary);
+}
+
+.topicTitle {
+    font-size: var(--h1);
+    font-weight: bold;
+}

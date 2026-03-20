@@ -2,15 +2,13 @@ import { Lightbulb } from "lucide-react";
 import Styles from "./Skills.module.css";
 import { frontend, progLang } from "@/app/data/skill";
 import { ChartContent } from "@/app/types/chart";
+import { TopicTitle } from "../TopicTitle/TopicTitle";
 
 
 export const Skills = () => {
   return (
     <div>
-      <div className={Styles.iconAndTitle}>
-        <Lightbulb className={Styles.icon} />
-        <div className={Styles.topicTitle}>Skills</div>
-      </div>
+      <TopicTitle title="Skills" icon={Lightbulb} />
       <div className={Styles.skillsKind}>
         <div>
           <div className="text-3xl">Programming Language</div>

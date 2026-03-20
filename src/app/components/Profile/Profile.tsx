@@ -1,14 +1,12 @@
 import { Cat } from "lucide-react";
 import Styles from "./Profile.module.css";
+import { TopicTitle } from "../TopicTitle/TopicTitle";
 
 
 export const Profile = () => {
   return (
     <div>
-      <div className={Styles.iconAndTitle}>
-        <Cat className={Styles.icon} />
-        <div className={Styles.topicTitle}>Profile</div>
-      </div>
+      <TopicTitle title="Profile" icon={Cat} />
       <div className={Styles.profileYearTitle}>
         <div className={Styles.profileYear}>- 2004</div>
         <div className={Styles.profileTitle}>爆誕</div>

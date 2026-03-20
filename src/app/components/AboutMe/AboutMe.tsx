@@ -1,13 +1,11 @@
 import { User } from "lucide-react";
 import Styles from "./AboutMe.module.css";
+import { TopicTitle } from "../TopicTitle/TopicTitle";
 
 export const AboutMe = () => {
   return (
     <div>
-      <div className={Styles.iconAndTitle}>
-        <User className={Styles.icon} />
-        <div className={Styles.topicTitle}>About Me</div>
-      </div>
+      <TopicTitle title="About Me" icon={User} />
       <div className={Styles.aboutMeDscription}>
         <div className={Styles.aboutMeName}>フジタコウヘイ</div>
         <div>
