@@ -1,8 +1,8 @@
 .aboutMeDscription {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin: 16px;
+    gap: var(--space-m);
+    margin: var(--space-m);
 }
 
 .aboutMeName {
@@ -13,7 +13,7 @@
 .iconAndTitle {
     display: flex;
     flex-direction: row;
-    gap: 16px;
+    gap: var(--space-m);
     align-items: center;
 }
 
@@ -28,12 +28,12 @@
 }
 
 .topicTitle {
-    font-size: 48px;
+    font-size: var(--h1);
     font-weight: bold;
 }
 
 .supplement {
-    font-size: xx-small;
+    font-size: var(--h3);
     opacity: 50%;
 }
 

@@ -1,8 +1,8 @@
 .profileYearTitle {
     display: flex;
     flex-direction: row;
-    gap: 16px;
-    font-size: x-large;
+    gap: var(--space-m);
+    font-size: var(--h2);
 }
 
 .profileYear {

@@ -2,9 +2,9 @@
     position: fixed;
     top: 0;
     display: flex;
-    gap: 12;
-    padding-top: 20;
-    padding-left: 8;
+    gap: var(--space-m);
+    padding-top: var(--space-m);
+    padding-left: var(--space-m);
     background-color: var(--background);
     width: 100%;
     z-index: 3;

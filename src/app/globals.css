@@ -7,6 +7,14 @@
 
   --color-true-black: #000000;
   --color-true-white: #ffffff;
+
+  --space-s: 8px;
+  --space-m: 16px;
+  --space-l: 24px;
+
+  --h3: 12px;
+  --h2: 24px;
+  --h1: 48px;
 }
 
 @theme inline {

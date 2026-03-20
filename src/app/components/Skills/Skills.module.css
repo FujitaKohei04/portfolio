@@ -1,15 +1,15 @@
 .skillsKind {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    margin-left: 16px;
+    gap: var(--space-m);
+    margin-left: var(--space-m);
 }
 
 .skillsChartLanguage {
     display: flex;
     flex-direction: row;
-    margin: 8px;
-    gap: 8px;
+    margin: var(--space-m);
+    gap: var(--space-s);
     align-items: end;
 }
 
