@@ -19,3 +19,10 @@
     font-size: 48px;
     font-weight: bold;
 }
+
+.contactIcons {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-m);
+    margin: var(--space-m);
+}
