@@ -10,21 +10,21 @@ export const Skills = () => {
     <div>
       <TopicTitle title="Skills" icon={Lightbulb} />
       <div className={Styles.skillsKind}>
-        <div>
-          <div className="text-3xl">Programming Language</div>
+        <div className={Styles.skillsCategoly}>
+          <div className={Styles.skillsCategolyName}>Programming Language</div>
           <SkillsChart contents={progLang}/>
         </div>
-        <div>
-          <div className="text-3xl">Frontend</div>
+        <div className={Styles.skillsCategoly}>
+          <div className={Styles.skillsCategolyName}>Frontend</div>
             <SkillsChart contents={frontend} />
         </div>
-        <div>
-          <div className="text-3xl">Backend</div>
-            <div>DBの基本操作</div>
+        <div className={Styles.skillsCategoly}>
+          <div className={Styles.skillsCategolyName}>Backend</div>
+            <div className={Styles.skillsCategolyContent}>DBの基本操作</div>
         </div>
-        <div>
-          <div className="text-3xl">Infrastructure</div>
-            <div>Linuxの基礎</div>
+        <div className={Styles.skillsCategoly}>
+          <div className={Styles.skillsCategolyName}>Infrastructure</div>
+            <div className={Styles.skillsCategolyContent}>Linuxの基礎</div>
         </div>
       </div>
     </div>
@@ -33,14 +33,16 @@ export const Skills = () => {
 
 export const SkillsChart = ( {contents: langs}:{contents: ChartContent[]}) => {
   return (
-    <div className={Styles.skillsChartLanguage}>
-      {langs.map((lang, index) => (
-        <div key={index} className={Styles.skillsChartBarContainer}>
-          <div className={Styles.skillsChartBar} style={{height: lang.value*16}}/>
-          <div>{lang.label}</div>
-          <div>{lang.value}カ月</div>
-        </div>
-      ))}
+    <div className={Styles.skillsCategoly}>
+      <div className={Styles.skillsChartLanguage}>
+        {langs.map((lang, index) => (
+          <div key={index} className={Styles.skillsChartBarContainer}>
+            <div className={Styles.skillsChartBar} style={{height: lang.value*16}}/>
+            <div>{lang.label}</div>
+            <div>{lang.value}カ月</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

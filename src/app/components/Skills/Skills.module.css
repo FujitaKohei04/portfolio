@@ -19,6 +19,18 @@
     align-items: center;
 }
 
+.skillsCategoly {
+    margin: var(--space-m);
+}
+
+.skillsCategolyName {
+    font-size: var(--h2);
+}
+
+.skillsCategolyContent {
+    margin: var(--space-m);;
+}
+
 .skillsChartBar {
     width: 16px;
     background-color: var(--color-primary);
