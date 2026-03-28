@@ -9,6 +9,7 @@ import { useState } from "react";
 import { WorkContent } from "@/app/types/work";
 import { createPortal } from "react-dom";
 import { TopicTitle } from "../TopicTitle/TopicTitle";
+import { Modal } from "@/app/ui/Modal";
 
 
 export const Works = () => {
@@ -22,47 +23,35 @@ export const Works = () => {
   );
 }
 
-const WorkDetailModal = (
+const WorkModalContent = (
   {
     work,
-    isShowMordal, 
-    setIsShowMordal
   }: {
     work: WorkContent,
-    isShowMordal: boolean, 
-    setIsShowMordal: (value: boolean) => void
-  }) => {
-    const [imgNum, setImgNum] = useState(0);
+  }
+) => {
+  const [imgNum, setImgNum] = useState(0);
 
-    return createPortal((
-      <div className={Styles.workMordalBackground} onClick={() => setIsShowMordal(false)}>
-        <div className={Styles.workMordal} onClick={() => setIsShowMordal(false)}>
-          <div className={Styles.workMordalContent}>
-            <div className={Styles.workCloseButton} >
-              <button onClick={() => setIsShowMordal(false)}>✕</button>
-            </div>
-            <div className={Styles.workDetailCard} onClick={(e) => e.stopPropagation()}>
-              <div className={Styles.workName}>
-                {`${work.workName}`}
-              </div>
-              <div className={Styles.workDescription}>
-                {`${work.workDescription}`}
-              </div>
-              <div className={Styles.workImageFlame} >
-                <Image src={work.examples[imgNum].img} alt={work.examples[imgNum].description} className={Styles.workImage} fill style={{ objectFit: 'contain' }}/>
-              </div>
-              <div className={Styles.workImageDescription}>
-                {`画像 ${imgNum+1}  : ${work.examples[imgNum].description}`}
-              </div>
-              <div className={Styles.workChanger} >
-                <button onClick={() => setImgNum((imgNum+(IMG_NUM-1))%IMG_NUM)}>＜</button>
-                <button onClick={() => setImgNum((imgNum+1)%IMG_NUM)}>＞</button>
-              </div>
-            </div>
-          </div>
-        </div>
+  return (
+    <div>
+      <div className={Styles.workName}>
+        {`${work.workName}`}
       </div>
-    ), document.body);
+      <div className={Styles.workDescription}>
+        {`${work.workDescription}`}
+      </div>
+      <div className={Styles.workImageFlame} >
+        <Image src={work.examples[imgNum].img} alt={work.examples[imgNum].description} style={{ objectFit: 'contain' }}/>
+      </div>
+      <div className={Styles.workImageDescription}>
+        {`画像 ${imgNum+1}  : ${work.examples[imgNum].description}`}
+      </div>
+      <div className={Styles.workChanger} >
+        <button onClick={() => setImgNum((imgNum+(IMG_NUM-1))%IMG_NUM)}>＜</button>
+        <button onClick={() => setImgNum((imgNum+1)%IMG_NUM)}>＞</button>
+      </div>
+    </div>
+  );
 }
 
 export const Work = ({workContents}:{workContents: WorkContent[]}) => {
@@ -90,7 +79,7 @@ export const Work = ({workContents}:{workContents: WorkContent[]}) => {
       </div>
 
       {isShowWorkDetail &&
-        <WorkDetailModal work={works[workNum]} isShowMordal={isShowWorkDetail} setIsShowMordal={setIsShowWorkDetail}/>
+        <Modal content={<WorkModalContent work={works[workNum]}/>} isShowModal={isShowWorkDetail} setIsShowModal={setIsShowWorkDetail} />
       }
     </div>
     

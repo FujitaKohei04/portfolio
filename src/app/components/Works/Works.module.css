@@ -22,23 +22,6 @@
     }
 }
 
-.workDetailCard {
-    margin: 4px;
-    padding: 4px;
-    border: 1px solid;
-    border-color: var(--foreground);
-    background-color: var(--background);
-}
-
-.workCloseButton {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: end;
-    width: 80vw;
-    margin-right: 8px;
-    
-}
-
 .workName {
     font-weight: bold;
 }
@@ -48,62 +31,24 @@
     margin-bottom: 8px;
 }
 
-.workMordalBackground {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: color-mix(in srgb, var(--background), transparent 30%);
-    z-index: 4;
-    width: 100vw;
-    height: 100vh;
-}
 
-.workMordal {
-    display: flex;
-    flex-direction: column;
-    gap: 4;
-    justify-items: center;
-    align-items: center;
-    /* background-color: var(--background); */
-}
-
-.workMordalContent {
-    display: flex;
-    flex-direction: column;
-    height: 80vh;
-    width: 80vw;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--background);
-}
-
-@media (hover: hover) {
-    .workMordalContent {
-    display: flex;
-    flex-direction: column;
-    height: 80vh;
-    width: 50vw;
-    margin-top: 2vh;
-    justify-content: start;
-    align-items: center;
-
-    }
-}
 
 .workImageFlame {
     position: relative;
-    width: 80vw;
-    aspect-ratio: 85 / 60;
-    padding: 2px;
+    flex: 1;
+    width: 100%;
+    aspect-ratio: 60 / 85;
+    padding: var(--space-s);
     background-color: color-mix(in srgb, var(--foreground), transparent 70%);
 }
 
 @media (hover: hover) {
     .workImageFlame {
         position: relative;
-        height: 80vh;
+        flex: 1;
+        width: 100%;
         aspect-ratio: 85 / 60;
-        padding: 2px;
+        padding: var(--space-s);
         background-color: color-mix(in srgb, var(--foreground), transparent 70%);
     }
 }

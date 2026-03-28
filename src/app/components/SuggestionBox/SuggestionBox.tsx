@@ -5,7 +5,6 @@ import styles from "./SuggestionBox.module.css";
 import { Send } from "lucide-react";
 
 export const SuggestionBox = () => {
-  const [count, setCount] = useState(0);
   return (
     <button className={styles.suggestBox} onClick={(() => window.open("", "_blank"))}>
       <div className={styles.suggestBoxNomal}></div>
@@ -15,5 +14,13 @@ export const SuggestionBox = () => {
         <Send className={styles.suggestBoxIcon} />
       </div>
     </button>
+  );
+}
+
+const SuggestionMordal = () => {
+  return (
+    <div className={styles.suggestionMordalBox}>
+      <div></div>
+    </div>
   );
 }
