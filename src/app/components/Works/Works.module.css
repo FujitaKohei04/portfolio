@@ -39,7 +39,7 @@
     width: 100%;
     aspect-ratio: 85 / 60;
     padding: var(--space-s);
-    background-color: color-mix(in srgb, var(--foreground), transparent 70%);
+    background-color: color-mix(in srgb, var(--foreground), transparent 90%);
 }
 
 @media (hover: hover) {
@@ -50,7 +50,7 @@
         /* height: 100%; */
         aspect-ratio: 85 / 60;
         padding: var(--space-s);
-        background-color: color-mix(in srgb, var(--foreground), transparent 70%);
+        background-color: color-mix(in srgb, var(--foreground), transparent 90%);
     }
 }
 

@@ -6,14 +6,31 @@ for example
     "increment will have role like title, sub title, and description", 
 and so on. */
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .main {
-    position: static;
     display: flex;
     flex-direction: column;
     gap: 200px;
-    margin-top: 60px;
+    flex: 1;
+    padding: var(--space-m);
     z-index: 2;
-    /* padding: 40px; */
+}
+
+@media (hover: hover) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        gap: 200px;
+        flex: 1;
+        padding: var(--space-m);
+        z-index: 2;
+        width: 50vw;
+    }
 }
 
 .target {
@@ -39,20 +56,6 @@ and so on. */
     to {
         opacity: 1;
         /* transform: translateY(0px); */
-    }
-}
-
-.topic {
-    height: auto;
-    width: 100vw;
-}
-
-
-
-@media (hover: hover) {
-    .topic {
-        height: auto;
-        width: 60vw;
     }
 }
 

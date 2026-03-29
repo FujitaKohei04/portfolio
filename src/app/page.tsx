@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Styles from "@/app/main.module.css";
+import styles from "@/app/main.module.css";
 import { useState } from "react";
 
 import { User, Hammer, Lightbulb, Cat, Mail } from "lucide-react";
@@ -23,31 +23,33 @@ import { Header } from "./components/Header/Header";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center">
-      <Background />
+  <div className={styles.container}>
+      {/* <Background /> */}
       <Header />
-      <SuggestionBox />
-      <main className={Styles.main}>
-        <section id="thumbnail" className={`${Styles.target} ${Styles.topic}`}>
-          <Thumbnail />
-        </section>
-        <section id="aboutMe" className={`${Styles.target} ${Styles.topic} ${Styles.topicAnimation}`}>
-          <AboutMe />
-        </section>
-        <section id="works" className={`${Styles.target} ${Styles.topic} ${Styles.topicAnimation}`}>
-          <Works />
-        </section>
-        <section id="skills" className={`${Styles.target} ${Styles.topic} ${Styles.topicAnimation}`}>
-          <Skills />
-        </section>
-        <section id="profile" className={`${Styles.target} ${Styles.topic} ${Styles.topicAnimation}`}>
-          <Profile />
-        </section>
-        <section id="contact" className={`${Styles.target} ${Styles.topic} ${Styles.topicAnimation}`}>
-          <Contact />
-        </section>
+      {/* <SuggestionBox /> */}
+      <main>
+        <div className={styles.main}>
+          <section id="thumbnail" className={`${styles.target}`}>
+            <Thumbnail />
+          </section>
+          <section id="aboutMe" className={`${styles.target} ${styles.topicAnimation}`}>
+            <AboutMe />
+          </section>
+          <section id="works" className={`${styles.target} ${styles.topicAnimation}`}>
+            <Works />
+          </section>
+          <section id="skills" className={`${styles.target} ${styles.topicAnimation}`}>
+            <Skills />
+          </section>
+          <section id="profile" className={`${styles.target} ${styles.topicAnimation}`}>
+            <Profile />
+          </section>
+          <section id="contact" className={`${styles.target} ${styles.topicAnimation}`}>
+            <Contact />
+          </section>
+        </div>
       </main>
-      
+      {/* <Footer /> */}
     </div>
   );
 }
