@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 import { Hammer } from "lucide-react";
-import Styles from "./Works.module.css";
+import styles from "./Works.module.css";
 import { IMG_NUM, WORKS } from "@/app/data/work";
 import { useState } from "react";
 import { WorkContent } from "@/app/types/work";
@@ -33,20 +33,20 @@ const WorkModalContent = (
   const [imgNum, setImgNum] = useState(0);
 
   return (
-    <div>
-      <div className={Styles.workName}>
+    <div className={styles.card} onClick={(e) => e.stopPropagation()}>
+      <div className={styles.workName}>
         {`${work.workName}`}
       </div>
-      <div className={Styles.workDescription}>
+      <div className={styles.workDescription}>
         {`${work.workDescription}`}
       </div>
-      <div className={Styles.workImageFlame} >
-        <Image src={work.examples[imgNum].img} alt={work.examples[imgNum].description} style={{ objectFit: 'contain' }}/>
+      <div className={styles.workImageFlame} >
+        <Image src={work.examples[imgNum].img} alt={work.examples[imgNum].description} layout="fill" style={{ objectFit: 'contain' }}/>
       </div>
-      <div className={Styles.workImageDescription}>
+      <div className={styles.workImageDescription}>
         {`画像 ${imgNum+1}  : ${work.examples[imgNum].description}`}
       </div>
-      <div className={Styles.workChanger} >
+      <div className={styles.workChanger} >
         <button onClick={() => setImgNum((imgNum+(IMG_NUM-1))%IMG_NUM)}>＜</button>
         <button onClick={() => setImgNum((imgNum+1)%IMG_NUM)}>＞</button>
       </div>
@@ -69,10 +69,10 @@ export const Work = ({workContents}:{workContents: WorkContent[]}) => {
   return (
     <div>
       <div>
-        <div className={Styles.worksArranger}>
+        <div className={styles.worksArranger}>
         {works.map((work, index) => (
-          <button key={index} onClick={() => workOnClicked(index)} className={Styles.worksArrangerUnder}>
-            <Image src={work.examples[0].img} alt={work.examples[0].description} className={Styles.workImage} />
+          <button key={index} onClick={() => workOnClicked(index)} className={styles.worksArrangerUnder}>
+            <Image src={work.examples[0].img} alt={work.examples[0].description} className={styles.workImage} />
           </button>
         ))}
         </div>
