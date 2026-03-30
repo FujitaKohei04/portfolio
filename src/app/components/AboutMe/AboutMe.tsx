@@ -9,9 +9,10 @@ export const AboutMe = () => {
       <div className={Styles.aboutMeDscription}>
         <div className={Styles.aboutMeName}>フジタコウヘイ</div>
         <div>
-          <div>福井県出身で、福井大学 工学部 電気電子情報工学科に所属。
-          アニメや漫画を見たり、お絵描きをするのが趣味。最近は料理にハマっている。
-          
+          <div>
+            福井県出身で、福井大学 工学部 電気電子情報工学科に所属。
+            器用貧乏な人間なので、何でもできるエンジニアになるため、日々努力している。
+            アニメや漫画を見たり、イラストが趣味。最近は料理にハマっている。
             そばやそうめんが好きで、３食同じでも飽きない。めんつゆは、
             <a href="https://www.yamamori.co.jp/products/sonomama_somen_500/" target="_blank" className={Styles.soumenSource}>
               これ

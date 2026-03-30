@@ -1,21 +1,23 @@
 import { Cat } from "lucide-react";
-import Styles from "./Profile.module.css";
+import styles from "./Profile.module.css";
 import { TopicTitle } from "../TopicTitle/TopicTitle";
-
+import { history } from "@/app/data/history";
 
 export const Profile = () => {
   return (
     <div>
       <TopicTitle title="Profile" icon={Cat} />
-      <div className={Styles.profileYearTitle}>
-        <div className={Styles.profileYear}>- 2004</div>
-        <div className={Styles.profileTitle}>爆誕</div>
+      <div className={styles.profileHistory}>
+        {history.map((thing, index) => (
+          <div key={index} className={styles.profileYearTitle}>
+            <div className={styles.profileYear}>{thing.year}</div>
+            <div className={styles.profileContent}>
+              <div className={styles.profileTitle}>{thing.title}</div>
+              <div className={styles.profileDescription}>{thing.description}</div>
+            </div>
+          </div>
+        ))}
       </div>
-      <div className={Styles.profileYearTitle}>
-        <div className={Styles.profileYear}>- 2023</div>
-        <div className={Styles.profileTitle}>福井大学入学</div>
-      </div>
-      
     </div>
   );
 }
