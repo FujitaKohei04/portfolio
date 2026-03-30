@@ -10,21 +10,21 @@ export const Skills = () => {
     <div>
       <TopicTitle title="Skills" icon={Lightbulb} />
       <div className={Styles.skillsKind}>
-        <div className={Styles.skillsCategoly}>
-          <div className={Styles.skillsCategolyName}>Programming Language</div>
+        <div className={Styles.skillsCategory}>
+          <div className={Styles.skillsCategoryName}>Programming Language</div>
           <SkillsChart contents={progLang}/>
         </div>
-        <div className={Styles.skillsCategoly}>
-          <div className={Styles.skillsCategolyName}>Frontend</div>
+        <div className={Styles.skillsCategory}>
+          <div className={Styles.skillsCategoryName}>Frontend</div>
             <SkillsChart contents={frontend} />
         </div>
-        <div className={Styles.skillsCategoly}>
-          <div className={Styles.skillsCategolyName}>Backend</div>
-            <div className={Styles.skillsCategolyContent}>DBの基本操作</div>
+        <div className={Styles.skillsCategory}>
+          <div className={Styles.skillsCategoryName}>Backend</div>
+            <div className={Styles.skillsCategoryContent}>DBの基本操作</div>
         </div>
-        <div className={Styles.skillsCategoly}>
-          <div className={Styles.skillsCategolyName}>Infrastructure</div>
-            <div className={Styles.skillsCategolyContent}>Linuxの基礎</div>
+        <div className={Styles.skillsCategory}>
+          <div className={Styles.skillsCategoryName}>Infrastructure</div>
+            <div className={Styles.skillsCategoryContent}>Linuxの基礎</div>
         </div>
       </div>
     </div>
@@ -33,7 +33,7 @@ export const Skills = () => {
 
 export const SkillsChart = ( {contents: langs}:{contents: ChartContent[]}) => {
   return (
-    <div className={Styles.skillsCategoly}>
+    <div className={Styles.skillsCategory}>
       <div className={Styles.skillsChartLanguage}>
         {langs.map((lang, index) => (
           <div key={index} className={Styles.skillsChartBarContainer}>

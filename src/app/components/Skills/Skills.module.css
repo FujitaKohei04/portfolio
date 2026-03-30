@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--space-m);
-    margin-left: var(--space-m);
+    margin: var(--space-m);
 }
 
 .skillsChartLanguage {
@@ -19,15 +19,15 @@
     align-items: center;
 }
 
-.skillsCategoly {
-    margin: var(--space-m);
+.skillsCategory {
+    /* margin: var(--space-m); */
 }
 
-.skillsCategolyName {
+.skillsCategoryName {
     font-size: var(--h2);
 }
 
-.skillsCategolyContent {
+.skillsCategoryContent {
     margin: var(--space-m);;
 }
 
