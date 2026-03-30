@@ -1,5 +1,5 @@
 import { DrawLogoSVG } from "../Welcome/Welcome";
-import Styles from "./Thumnail.module.css";
+import Styles from "./Thumbnail.module.css";
 import share from "@/app/styles/share.module.css";
 
 

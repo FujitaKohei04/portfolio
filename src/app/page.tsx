@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "@/app/main.module.css";
-import { Thumbnail } from "./components/Thumnail/Thumnail";
+import { Thumbnail } from "./components/Thumbnail/Thumbnail";
 import { AboutMe } from "./components/AboutMe/AboutMe";
 import { Works } from "./components/Works/Works";
 import { Skills } from "./components/Skills/Skills";
