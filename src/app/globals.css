@@ -5,6 +5,9 @@
   --foreground: #eeedec;
   --color-primary: #e77913;
 
+  --color-near-back: color-mix(in srgb, var(--foreground), transparent 80%);
+  --color-near-fore: color-mix(in srgb, var(--foreground), transparent 20%);
+
   --color-true-black: #000000;
   --color-true-white: #ffffff;
 

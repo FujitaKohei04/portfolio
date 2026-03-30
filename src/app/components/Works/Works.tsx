@@ -71,17 +71,18 @@ export const Work = ({workContents}:{workContents: WorkContent[]}) => {
       <div>
         <div className={styles.worksArranger}>
         {works.map((work, index) => (
-          <button key={index} onClick={() => workOnClicked(index)} className={styles.worksArrangerUnder}>
-            <Image src={work.examples[0].img} alt={work.examples[0].description} className={styles.workImage} />
-          </button>
+          <div className={styles.workWrapper} key={index}>
+            <div className={styles.workName}>{work.workName}</div>
+            <button onClick={() => workOnClicked(index)} className={styles.worksArrangerUnder}>
+              <Image src={work.examples[0].img} alt={work.examples[0].description} objectFit="cover" style={{aspectRatio: 85/60}}/>
+            </button>
+          </div>
         ))}
         </div>
       </div>
-
       {isShowWorkDetail &&
         <Modal content={<WorkModalContent work={works[workNum]}/>} isShowModal={isShowWorkDetail} setIsShowModal={setIsShowWorkDetail} />
       }
     </div>
-    
   );
 }

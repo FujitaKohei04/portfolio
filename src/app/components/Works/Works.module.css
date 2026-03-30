@@ -1,24 +1,29 @@
 .worksArranger {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-m);
+    margin: var(--space-m);
+}
+
+.workWrapper {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.workName {
+    font-size: var(--h2);
+    font-weight: bold;
 }
 
 .worksArrangerUnder {
-    width: 46vw;
-    margin-right: 1vw;
-    margin-bottom: 1vw;
-    padding: 2px;
-    background-color: color-mix(in srgb, var(--foreground), transparent 70%);
+    width: 100%;
+    background-color: var(--color-near-back);
 }
 
 @media (hover: hover) {
     .worksArrangerUnder {
-        width: 20vw;
-        margin-right: 1vw;
-        margin-bottom: 1vw;
-        padding: 2px;
-        background-color: color-mix(in srgb, var(--foreground), transparent 70%);
+        width: 100%;
+        background-color: var(--color-near-back);
     }
 }
 
@@ -30,8 +35,6 @@
     margin-top: 8px;
     margin-bottom: 8px;
 }
-
-
 
 .workImageFlame {
     position: relative;
