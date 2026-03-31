@@ -39,6 +39,7 @@ body {
   color: var(--foreground);
   font-family: system-ui;
   font-weight: 10;
+  font-size: var(--h3);
   overflow-x: hidden;
 }
 

@@ -6,36 +6,59 @@
 }
 
 .skillsChartLanguage {
-    display: flex;
-    flex-direction: row;
-    margin: var(--space-m);
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    margin-top: var(--space-m);
     gap: var(--space-s);
     align-items: end;
 }
 
 .skillsChartBarContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: var(--space-s);
 }
 
 .skillsCategory {
-    /* margin: var(--space-m); */
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+}
+
+.chartContainer {
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.chartUnit {
+    display: flex;
+    flex-direction: column;
+    justify-self: end;
+    font-size: var(--h3);
 }
 
 .skillsCategoryName {
     font-size: var(--h2);
+    /* font-weight: bold; */
+    /* color: var(--color-primary); */
 }
 
 .skillsCategoryContent {
     margin: var(--space-m);;
 }
 
+.chartLabel {
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
 .skillsChartBar {
-    width: 16px;
+    width: 1px;
     background-color: var(--color-primary);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: end;
+    padding-right: var(--space-s);
 }
 
 .iconAndTitle {
