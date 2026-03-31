@@ -3,7 +3,7 @@
     top: 0;
     display: flex;
     gap: var(--space-m);
-    padding-top: var(--space-m);
+    padding-top: var(--space-s);
     padding-left: var(--space-m);
     background-color: var(--background);
     width: 100%;

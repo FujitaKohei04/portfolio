@@ -16,15 +16,12 @@
 }
 
 .worksArrangerUnder {
+    position: relative;
     width: 100%;
+    aspect-ratio: 85/60;
     background-color: var(--color-near-back);
-}
-
-@media (hover: hover) {
-    .worksArrangerUnder {
-        width: 100%;
-        background-color: var(--color-near-back);
-    }
+    border-radius: var(--space-s);
+    overflow: hidden;
 }
 
 .workName {

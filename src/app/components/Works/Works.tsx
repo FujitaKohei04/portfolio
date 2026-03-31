@@ -74,7 +74,7 @@ export const Work = ({workContents}:{workContents: WorkContent[]}) => {
           <div className={styles.workWrapper} key={index}>
             <div className={styles.workName}>{work.workName}</div>
             <button onClick={() => workOnClicked(index)} className={styles.worksArrangerUnder}>
-              <Image src={work.examples[0].img} alt={work.examples[0].description} objectFit="cover" style={{aspectRatio: 85/60}}/>
+              <Image src={work.examples[0].img} alt={work.examples[0].description} layout="fill" objectFit="cover"/>
             </button>
           </div>
         ))}
